@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
             EditText editText = findViewById(R.id.myEditText);
             Button btn = findViewById(R.id.myButton);
 
+            btn.setOnClickListener(v1 -> Toast.makeText(MainActivity.this,
+                    "Welcome " + editText.getText().toString(),
+                    Toast.LENGTH_SHORT).show());
             return insets;
         });
     }
